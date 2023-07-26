@@ -29,16 +29,24 @@
     position: fixed;
     width: 100%;
     z-index: 100000;
+    justify-content: space-around;
   }
   
   .nav-links a {
     color: #000;
+    font-family: 'DM Serif Display', serif;
   }
   
+
+  .nav-links a:hover {
+    color: red;
+    text-decoration: none;
+    transition: 0.5s ease;
+  }
   /* LOGO */
   .logo {
     font-size: 32px;
-    width: 20%;
+    flex-basis: 20%;
   }
   
   /* NAVBAR MENU */
@@ -46,8 +54,7 @@
     display: flex;
     gap: 1em;
     font-size: 18px;
-    width: 80%;
-    justify-content: flex-start;
+    flex-basis: 80%;
   }
   
   .menu li:hover {
@@ -60,53 +67,19 @@
     padding: 5px 14px;
   }
   
-  /* DROPDOWN MENU */
-  .services {
-    position: relative; 
-  }
   
-  
-  .dropdown {
-    background-color: rgb(1, 139, 139);
-    padding: 1em 0;
-    position: absolute; /*WITH RESPECT TO PARENT*/
-    display: none;
-    border-radius: 8px;
-    top: 35px;
-  }
-  
-  .dropdown li + li {
-    margin-top: 10px;
-  }
-  
-  .dropdown li {
-    padding: 0.5em 1em;
-    width: 8em;
-    text-align: center;
-  }
-  
-  .dropdown li:hover {
-    background-color: #4c9e9e;
-  }
-  
-  .services:hover .dropdown {
-    display: block;
-  }
-
-  /* RESPONSIVE NAVBAR MENU STARTS */
-
-/* CHECKBOX HACK */
-
 input[type=checkbox] {
     display: none;
   } 
   
-  /* HAMBURGER MENU */
   .hamburger {
     display: none;
     font-size: 24px;
     user-select: none;
   }
+
+
+
 
   .background-clip {
     width: 100vw;
@@ -117,43 +90,44 @@ input[type=checkbox] {
     background-color:#fff;
     width: 100%;
     height: 63vh;
+    margin:auto;
+    display: flex;
+    flex-wrap: wrap;
+
   }
   
+
+  .about-left {
+    flex-basis: 50%;
+    height: 100%;
+  }
+  .about-right {
+    background-color: #ddecfa;
+    text-align: center;
+    margin: auto;
+    flex-basis: 50%;
+    height:100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+
+  .ab-r {
+    width: 70%;
+  }
+
+
+
   .address-bar {
     width: 100%;
     height: 20vh;
     background-color: #a21520;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.8vw;
+    font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-
-  .about-con {
-    width: 100%;
-    height: 60vh;
-    display: flex;
-  }
-
-  .about-left {
-    width: 50%;
-  }
-  .about-right {
-    width: 50%;
-    background-color: #ddecfa;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .ab-r {
-    width: 70%;
-    font-size: 1.3vw;
   }
 
   .info {
@@ -168,20 +142,26 @@ input[type=checkbox] {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  }
+
+  .info-1 {
+    width: 90%;
+    margin: auto;
+    height: 70vh;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .info-2 {
-    display: flex;
-    width:80%;
+    width: 90%;
+    margin: auto;
     height: 70vh;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .info-image {
-    width: 50%;
+    flex-basis: 50%;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -190,18 +170,19 @@ input[type=checkbox] {
   }
 
   .info-content{
-    width: 50%;
+    flex-basis: 50%;
     overflow: hidden;
     flex-direction: column;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: auto;
   }
 
   .info-content h1 {
     font-family: 'DM Serif Display', serif;
     color: black;
-    font-size: 4.5vw;
+    font-size: 50px;
   }
 
   .about-right h1 {
@@ -223,23 +204,17 @@ input[type=checkbox] {
     text-align: center;
   }
 
-  .info-con p{
+  .info-content p{
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.3vw;
+    font-size: 20px;
     line-height: 3vh;
     margin-top: 3vh;
   }
 
   .info-content h3 {
     font-family: 'Parisienne', cursive;
-    font-size: 2.2vw;
+    font-size: 30px;
     font-weight: 10;
-  }
-
-  .info-2 {
-    display: flex;
-    width: 100%;
-    height: 70vh;
   }
 
   .form-op {
@@ -340,22 +315,16 @@ input[type=checkbox] {
   
   .wrapper {
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 105vh;
   }
   
   .zoom-effect-container {
-      float: left;
-      position: relative;
-      width: 20%;
-      height: 15rem;
-      margin: 0 auto;
       overflow: hidden;
+      flex-basis: 20%;
   }
-  
-  .image-card {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+ 
   
   .image-card img {
     -webkit-transition: 0.4s ease;
@@ -365,7 +334,7 @@ input[type=checkbox] {
   .zoom-effect-container:hover .image-card img {
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
-    object-fit: contain;
+    object-fit: cover;
   }
   
   a{
@@ -387,19 +356,18 @@ input[type=checkbox] {
   .newsletter h1 {
     color: black;
     font-family: 'DM Serif Display', serif;
-    font-size: 4vw;
+    font-size: 40px;
     text-align: left;
   }
 
   .newsletter h3 {
     font-family: 'Parisienne', cursive;
-    font-size: 2.2vw;
+    font-size: 25px;
     font-weight: 10;
   }
 
   .newsletter p {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.3vw;
   }
 
   .news-lef {
@@ -475,30 +443,53 @@ input[type=checkbox] {
   }
   
   .footer {
-    width: 70%;
+    width: 100%;
+    background-color: #a21520;
+    color: #fff;
+    height: 40vh;
+    margin:auto;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
 
   .footer h2 {
     font-family: 'DM Serif Display', serif;
-    font-size: 2vw;
+    font-size: 30px;
+  }
+
+  .location {
+    flex-basis: 33%;
+    text-align: center;
+  }
+
+  .find-con {
+    flex-basis: 33%;
+    text-align: center;
+  }
+
+  .third {
+    flex-basis: 33%;
+    text-align: center;
   }
 
   .location p {
     font-family: 'Montserrat', sans-serif;
     line-height: 25px;
+    font-size: 17px;
   }
 
   .hours ul li {
     font-family: 'Montserrat', sans-serif;
     padding-bottom: 2px;
-    font-size: 1.2vw;
+    font-size: 17px;
   }
 
   .find-con {
     display: flex;
     flex-direction: column;
+    font-size: 17px;
   }
 
   .creds {
@@ -515,6 +506,7 @@ input[type=checkbox] {
 
 .power {
     display: flex;
+    font-size: 15px;
 }
 
 .power img {
@@ -526,11 +518,11 @@ input[type=checkbox] {
 .creds a {
     color: white;
     text-decoration: underline;
-    font-size: 1.2vw;
+    font-size: 15px;
 }
 
 .power h2 {
-    font-size: 1.2vw;
+    font-size: 20px;
 }
 
 .strive {
@@ -542,7 +534,10 @@ input[type=checkbox] {
     justify-content: center;
     align-items: center;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1vw;
+}
+
+.strive h3 {
+    font-size: 15px;
 }
 
 
@@ -779,6 +774,54 @@ input[type=checkbox] {
 
   /* APPLYING MEDIA QUERIES */
   @media (max-width: 768px) {
+
+    .wrapper {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .zoom-effect-container {
+        width: 50%;
+    }
+
+    .info {
+        height: 160vh;
+    }
+
+    .info-1 {
+        flex-direction: column;
+        height: 80vh;
+    }
+
+    .info-2 {
+        flex-direction: column;
+        height: 80vh;
+    }
+
+    .footer {
+        flex-direction: column;
+        height: 90vh;
+    }
+
+    .about-us {
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .about-left {
+        width: 100%;
+        background-size: cover;
+    }
+
+    .logo {
+        flex-basis: 60%;
+    }
+
+    .menu {
+        flex-basis: 40%;
+    }
+
+
    .menu {
       display:none;
       position: absolute;
