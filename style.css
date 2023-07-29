@@ -650,100 +650,6 @@ input[type=checkbox] {
     background: #ffeb3b;
 }
 
-.carousel-caption {
-    font-size: 12px;
-    font-style: italic;
-    font-weight: bold;
-    display: none; /*comment out to display captions*/
-  }
-  
-  .carousel-control {
-    text-shadow: 0;
-  }
-  
-  .carousel-control .glyphicon-chevron-left {
-    top: 45%;
-    font-size: 20px;
-  }
-  
-  .carousel-control .glyphicon-chevron-right {
-    top: 45%;
-    font-size: 20px;
-  }
-  
-  .carousel-control.left {
-    background-image: -webkit-linear-gradient(
-      left,
-      rgba(0, 0, 0, 0) 0,
-      rgba(0, 0, 0, 0.0001) 100%
-    );
-    background-image: -o-linear-gradient(
-      left,
-      rgba(0, 0, 0, 0) 0,
-      rgba(0, 0, 0, 0) 100%
-    );
-    background-image: -webkit-gradient(
-      linear,
-      left top,
-      right top,
-      from(rgba(0, 0, 0, 0)),
-      to(rgba(0, 0, 0, 00001))
-    );
-    background-image: linear-gradient(
-      to right,
-      rgba(0, 0, 0, 0) 0,
-      rgba(0, 0, 0, 0) 100%
-    ) !important;
-  }
-  
-  .carousel-control.right {
-    background-image: -webkit-linear-gradient(
-      left,
-      rgba(0, 0, 0, 0) 0,
-      rgba(0, 0, 0, 0.0001) 100%
-    );
-    background-image: -o-linear-gradient(
-      left,
-      rgba(0, 0, 0, 0) 0,
-      rgba(0, 0, 0, 0) 100%
-    );
-    background-image: -webkit-gradient(
-      linear,
-      left top,
-      right top,
-      from(rgba(0, 0, 0, 0)),
-      to(rgba(0, 0, 0, 00001))
-    );
-    background-image: linear-gradient(
-      to right,
-      rgba(0, 0, 0, 0) 0,
-      rgba(0, 0, 0, 0) 100%
-    ) !important;
-  }
-  
-  .carousel-indicators {
-    bottom: -40px !important;
-  }
-  
-  .carousel-indicators li {
-    border: 1px solid #d9d9d9 !important;
-    border-radius: 10px !important;
-    background-color: #d9d9d9 !important;
-    width: 11px !important;
-    height: 11px !important;
-    margin-left: 3px !important;
-    margin-right: 3px !important;
-  }
-  
-  .carousel-indicators .active {
-    border: 0px solid #869791 !important;
-    border-radius: 10px !important;
-    background-color: #869791 !important;
-    width: 11px !important;
-    height: 11px !important;
-    margin-bottom: 1px !important;
-  }
-
   .button {
     background-color: #002e48; /* Green */
     border: none;
@@ -757,7 +663,116 @@ input[type=checkbox] {
     cursor: pointer;
     font-family: 'Montserrat', sans-serif;
   }
-  
+
+  .car-container, .carousell {
+    box-sizing: inherit;
+  }
+
+  .car-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+    background-color: #d1e8ee;
+  }
+
+  ::selection {
+    color: #fff;
+    background-color: #005aee;
+  }
+
+  .carousell {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 20px 0;
+    border-radius: 10px;
+    overflow:hidden;
+    font-family: 'DM Serif Display', serif;
+    font-weight: 300;
+    font-size: 1.5em;
+    color: #303336;
+  }
+
+
+  .carousell .img-list {
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: calc(100%*3);
+    height: 100%;
+    transition: 500ms;
+}
+
+  .carousell .img-list img {
+    float: left;
+    width: calc(100%/3);
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .carousell .content {
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    padding-bottom: 75px;
+  }
+
+  .carousell .text-content {
+    position: absolute;
+    bottom: 120px;
+    width: calc(100%-100px);
+    margin: auto;
+    max-width: 100%;
+    line-height: 1.2;
+    color: #fff;
+  }
+
+  .carousell h2 {
+    font-size: 3em;
+    font-weight: 700;
+    padding-bottom: 20px;
+  }
+
+  .carousell p {
+    font-weight: 400;
+  }
+
+  .carousell .btn-section {
+    position: absolute;
+    display: flex;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 200;
+    width: fit-content;
+  }
+
+  .carousell .caro-btn {
+    width: 25px;
+    height: 20px;
+    margin: 0 10px;
+    background-color: #ffff44;
+    transition: 300mx;
+    cursor: pointer;
+  }
+
+  .carousell .caro-btn:first-child {
+    background-color: #fff;
+  }
+
+  .carousell .caro-btn:hover {
+    background-color: #ffffffaa;
+  }
+
+
+
+
 
 
 
@@ -785,17 +800,17 @@ input[type=checkbox] {
     }
 
     .info {
-        height: 160vh;
+        height: 200vh;
     }
 
     .info-1 {
         flex-direction: column;
-        height: 80vh;
+        height: 100vh;
     }
 
     .info-2 {
         flex-direction: column;
-        height: 80vh;
+        height: 100vh;
     }
 
     .footer {
