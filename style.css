@@ -718,7 +718,7 @@ input[type=checkbox] {
   .carousell .content {
     position: relative;
     z-index: 100;
-    width: 100%;
+    width: 50%;
     height: 100%;
     padding: 50px;
     padding-bottom: 75px;
