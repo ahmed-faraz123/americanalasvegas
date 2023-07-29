@@ -318,6 +318,7 @@ input[type=checkbox] {
     display: flex;
     flex-wrap: wrap;
     height: 105vh;
+    overflow: hidden;
   }
   
   .zoom-effect-container {
